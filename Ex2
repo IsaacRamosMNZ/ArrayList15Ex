@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RemoverElementoArrayList {
+    public static void main(String[] args) {
+        // Criando o ArrayList de strings
+        ArrayList<String> listaDeNomes = new ArrayList<>();
+        
+        // Adicionando os nomes ao ArrayList
+        listaDeNomes.add("Ana");
+        listaDeNomes.add("Carlos");
+        listaDeNomes.add("Bruna");
+        listaDeNomes.add("Daniel");
+        listaDeNomes.add("Eduardo");
+        
+        // Criando o scanner para ler entradas do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Exibindo os nomes atuais na lista
+        System.out.println("Lista de nomes:");
+        listaDeNomes.forEach(nome -> System.out.println(nome));
+        
+        // Solicitando ao usuário um nome para remover
+        System.out.print("\nDigite o nome que você deseja remover: ");
+        String nomeParaRemover = scanner.nextLine();
+        
+        // Verificando se o nome existe na lista e removendo-o
+        if (listaDeNomes.contains(nomeParaRemover)) {
+            listaDeNomes.remove(nomeParaRemover);  // Remove o nome da lista
+            System.out.println("\nNome removido com sucesso!");
+        } else {
+            System.out.println("\nNome não encontrado na lista.");
+        }
+        
+        // Exibindo a lista atualizada
+        System.out.println("\nLista atualizada:");
+        listaDeNomes.forEach(nome -> System.out.println(nome));
+        
+        // Fechando o scanner
+        scanner.close();
+    }
+}
