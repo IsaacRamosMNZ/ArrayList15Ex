@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class ExemploArrayList {
+    public static void main(String[] args) {
+        // Criando o ArrayList original com alguns nomes
+        ArrayList<String> nomesOriginal = new ArrayList<>();
+        nomesOriginal.add("Ana");
+        nomesOriginal.add("Carlos");
+        nomesOriginal.add("Juliana");
+        nomesOriginal.add("Ricardo");
+        nomesOriginal.add("Fernanda");
+
+        // Criando o novo ArrayList e copiando os elementos do ArrayList original
+        ArrayList<String> nomesCopia = new ArrayList<>(nomesOriginal);
+
+        // Exibindo o ArrayList original
+        System.out.println("ArrayList Original:");
+        for (String nome : nomesOriginal) {
+            System.out.println(nome);
+        }
+
+        // Exibindo o novo ArrayList (cópia)
+        System.out.println("\nArrayList Cópia:");
+        for (String nome : nomesCopia) {
+            System.out.println(nome);
+        }
+    }
+}
