@@ -1,0 +1,45 @@
+package javaapplication198;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class JavaApplication198 {
+
+    
+    public static void main(String[] args) {
+      
+        
+        
+               // Criando o ArrayList de inteiros
+        ArrayList<Integer> listaDeNumeros = new ArrayList<>();
+        
+        // Criando o scanner para ler entradas do usuário
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicitando ao usuário que insira cinco números
+        System.out.println("Por favor, insira 5 números inteiros:");
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();  // Lê o número inteiro inserido pelo usuário
+            listaDeNumeros.add(numero);      // Adiciona o número ao ArrayList
+        }
+        
+        // Exibindo os números armazenados no ArrayList
+        System.out.println("\nOs números inseridos foram:");
+         listaDeNumeros.forEach((numero) -> {
+            System.out.println(numero);
+        });
+        
+        // Fechando o scanner
+        scanner.close();
+    }
+   }
+       
+       
+        
+       
+    
+    
+
