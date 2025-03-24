@@ -1,0 +1,44 @@
+package arraylist;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Arraylist {
+
+    public static void main(String[] args) {
+   
+   // Criando o ArrayList de produtos
+        ArrayList<String> listaDeProdutos = new ArrayList<>();
+        
+        // Adicionando alguns produtos à lista
+        listaDeProdutos.add("Arroz");
+        listaDeProdutos.add("Feijão");
+        listaDeProdutos.add("Macarrão");
+        listaDeProdutos.add("Óleo");
+        listaDeProdutos.add("Açúcar");
+        
+        // Exibindo os produtos na lista
+        System.out.println("Lista de produtos:");
+
+        listaDeProdutos.forEach((produto) -> {
+            System.out.println(produto);
+        });
+        
+        // Pedindo ao usuário para inserir o nome do produto a ser buscado
+        try ( // Criando o Scanner para receber a entrada do usuário
+                Scanner scanner = new Scanner(System.in)) {
+            // Pedindo ao usuário para inserir o nome do produto a ser buscado
+            System.out.print("\nDigite o nome do produto que deseja buscar: ");
+            String produtoBusca = scanner.nextLine();
+            
+            // Verificando se o produto está na lista
+            if (listaDeProdutos.contains(produtoBusca)) {
+                System.out.println("\nProduto encontrado: " + produtoBusca);
+            } else {
+                System.out.println("\nProduto não encontrado.");
+            }
+        }
+    }
+}
