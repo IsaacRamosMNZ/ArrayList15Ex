@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ContandoOcorrencias {
+    public static void main(String[] args) {
+        // Criando o ArrayList de palavras
+        ArrayList<String> listaDePalavras = new ArrayList<>();
+        
+        // Criando o Scanner para entrada do usuário
+        try (Scanner scanner = new Scanner(System.in)) {
+            // Pedindo ao usuário para inserir as palavras
+            System.out.println("Digite várias palavras. Digite 'fim' para encerrar.");
+            
+            // Loop para receber várias palavras até o usuário digitar 'fim'
+            String palavra;
+            while (true) {
+                System.out.print("Digite uma palavra: ");
+                palavra = scanner.nextLine();
+                
+                if (palavra.equalsIgnoreCase("fim")) {
+                    break; // Sai do loop quando o usuário digita 'fim'
+                }
+                
+                listaDePalavras.add(palavra); // Adiciona a palavra à lista
+            }
+
+            // Exibindo a lista de palavras inseridas
+            System.out.println("\nLista de palavras inseridas:");
+            listaDePalavras.forEach(p -> System.out.println(p));
+
+            // Pedindo ao usuário para inserir a palavra que deseja contar
+            System.out.print("\nDigite a palavra que deseja contar as ocorrências: ");
+            String palavraParaContar = scanner.nextLine();
+            
+            // Contando quantas vezes a palavra aparece na lista
+            int ocorrencias = 0;
+            ocorrencias = listaDePalavras.stream().filter((palavraNaLista) -> (palavraNaLista.equalsIgnoreCase(palavraParaContar))).map((_item) -> 1).reduce(ocorrencias, Integer::sum);
+            
+            // Exibindo o resultado
+            System.out.println("\nA palavra \"" + palavraParaContar + "\" aparece " + ocorrencias + " vez(es) na lista.");
+        }
+    }
+}
