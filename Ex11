@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class ExemploArrayListDecimal {
+    public static void main(String[] args) {
+        // Criando o ArrayList com números decimais (do tipo Double)
+        ArrayList<Double> numeros = new ArrayList<>();
+        numeros.add(10.5);
+        numeros.add(20.3);
+        numeros.add(30.7);
+        numeros.add(40.1);
+        numeros.add(50.2);
+
+        // Calculando a soma de todos os valores armazenados no ArrayList
+        double soma = 0;
+        for (Double numero : numeros) {
+            soma += numero;
+        }
+
+        // Exibindo a soma
+        System.out.println("A soma de todos os números é: " + soma);
+    }
+}
