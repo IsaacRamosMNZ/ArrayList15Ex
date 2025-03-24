@@ -4,11 +4,11 @@ public class ExemploArrayList {
     public static void main(String[] args) {
         // Criando o ArrayList original com alguns nomes
         ArrayList<String> nomesOriginal = new ArrayList<>();
-        nomesOriginal.add("Ana");
-        nomesOriginal.add("Carlos");
-        nomesOriginal.add("Juliana");
-        nomesOriginal.add("Ricardo");
-        nomesOriginal.add("Fernanda");
+        nomesOriginal.add("Jorge");
+        nomesOriginal.add("Ryan");
+        nomesOriginal.add("Isaac");
+        nomesOriginal.add("Porto");
+        nomesOriginal.add("Crippa");
 
         // Criando o novo ArrayList e copiando os elementos do ArrayList original
         ArrayList<String> nomesCopia = new ArrayList<>(nomesOriginal);
