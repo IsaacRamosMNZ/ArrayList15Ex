@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class RemoverDuplicados {
+    public static void main(String[] args) {
+        // Criando o ArrayList com números inteiros (incluindo duplicados)
+        ArrayList<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
+        numeros.add(2);
+        numeros.add(3);
+        numeros.add(4);
+        numeros.add(2);
+        numeros.add(5);
+        numeros.add(1);
+        
+        // Exibindo o ArrayList original
+        System.out.println("ArrayList original: " + numeros);
+        
+        // Removendo duplicados utilizando HashSet
+        HashSet<Integer> set = new HashSet<>(numeros);
+        
+        // Convertendo o HashSet de volta para ArrayList
+        ArrayList<Integer> listaSemDuplicados = new ArrayList<>(set);
+        
+        // Exibindo a lista sem duplicados
+        System.out.println("Lista sem duplicados: " + listaSemDuplicados);
+    }
+}
