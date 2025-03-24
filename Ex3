@@ -1,0 +1,35 @@
+package arraylist;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Arraylist {
+
+    public static void main(String[] args) {
+   
+
+        // Criando o ArrayList de números inteiros
+        ArrayList<Integer> listaDeNumeros = new ArrayList<>();
+        
+        // Gerador de números aleatórios
+        Random random = new Random();
+        
+        // Adicionando 10 números aleatórios entre 1 e 100 ao ArrayList
+        for (int i = 0; i < 10; i++) {
+            int numeroAleatorio = random.nextInt(100) + 1;  // Gera números entre 1 e 100
+            listaDeNumeros.add(numeroAleatorio);
+        }
+        
+        // Exibindo a lista de números aleatórios
+        System.out.println("Lista de números antes da ordenação:");
+        listaDeNumeros.forEach(numero -> System.out.println(numero));
+        
+        // Ordenando a lista em ordem crescente
+        Collections.sort(listaDeNumeros);
+        
+        // Exibindo a lista ordenada
+        System.out.println("\nLista de números ordenada em ordem crescente:");
+        listaDeNumeros.forEach(numero -> System.out.println(numero));
+    }
+}
