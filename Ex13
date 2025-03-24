@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class MesclarArrayLists {
+    public static void main(String[] args) {
+        // Criando o primeiro ArrayList
+        ArrayList<Integer> lista1 = new ArrayList<>();
+        lista1.add(1);
+        lista1.add(2);
+        lista1.add(3);
+        lista1.add(4);
+        lista1.add(5);
+
+        // Criando o segundo ArrayList
+        ArrayList<Integer> lista2 = new ArrayList<>();
+        lista2.add(6);
+        lista2.add(7);
+        lista2.add(8);
+        lista2.add(9);
+        lista2.add(10);
+
+        // Criando o terceiro ArrayList para mesclar os dois
+        ArrayList<Integer> listaMesclada = new ArrayList<>();
+        
+        // Adicionando os elementos de lista1
+        listaMesclada.addAll(lista1);
+        
+        // Adicionando os elementos de lista2
+        listaMesclada.addAll(lista2);
+
+        // Exibindo o resultado
+        System.out.println("Lista mesclada: " + listaMesclada);
+    }
+}
